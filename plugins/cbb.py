@@ -1,28 +1,56 @@
 #(©)Codexbotz
-
-from pyrogram import __version__
 from bot import Bot
 from config import OWNER_ID
-from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
+from Data import Data
+from pyrogram import filters
+from pyrogram.errors import MessageNotModified
+from pyrogram.types import CallbackQuery, InlineKeyboardMarkup, Message
+
+
+@Bot.on_message(filters.private & filters.incoming & filters.command("about"))
+async def _about(client: Bot, msg: Message):
+    await client.send_message(
+        msg.chat.id,
+        Data.ABOUT.format(client.username, OWNER_ID),
+        disable_web_page_preview=True,
+        reply_markup=InlineKeyboardMarkup(Data.mbuttons),
+    )
+
+
+@Bot.on_message(filters.private & filters.incoming & filters.command("help"))
+async def _help(client: Bot, msg: Message):
+    await client.send_message(
+        msg.chat.id,
+        "<b>Botni ishlatishni bilmaganlar uchun!</b>\n" + Data.HELP,
+        disable_web_page_preview=True,
+        reply_markup=InlineKeyboardMarkup(Data.buttons),
+    )
+
 
 @Bot.on_callback_query()
 async def cb_handler(client: Bot, query: CallbackQuery):
     data = query.data
     if data == "about":
-        await query.message.edit_text(
-            text = f"<b>○ Creator : <a href='tg://user?id={OWNER_ID}'>Owner</a>\n○ Language : <code>Python3</code>\n○ Library : <a href='https://docs.pyrogram.org/'>Pyrogram asyncio {__version__}</a>\n○ Source Code : <a href='https://github.com/CodeXBotz/File-Sharing-Bot'>Click here</a>\n○ Channel : @Animes_VQ\n○ Chat Group : @Weebs_Unity</b>",
-            disable_web_page_preview = True,
-            reply_markup = InlineKeyboardMarkup(
-                [
-                    [
-                        InlineKeyboardButton("🔒 Close", callback_data = "close")
-                    ]
-                ]
+        try:
+            await query.message.edit_text(
+                text=Data.ABOUT.format(client.username, OWNER_ID),
+                disable_web_page_preview=True,
+                reply_markup=InlineKeyboardMarkup(Data.mbuttons),
             )
-        )
+        except MessageNotModified:
+            pass
+    elif data == "help":
+        try:
+            await query.message.edit_text(
+                text="<b>Botni ishlatishni bilmaganlar uchun!</b>\n" + Data.HELP,
+                disable_web_page_preview=True,
+                reply_markup=InlineKeyboardMarkup(Data.buttons),
+            )
+        except MessageNotModified:
+            pass
     elif data == "close":
         await query.message.delete()
         try:
             await query.message.reply_to_message.delete()
-        except:
+        except BaseException:
             pass
