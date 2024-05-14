@@ -87,8 +87,8 @@ async def start_command(client: Client, message: Message):
             [
     
     [
-                    InlineKeyboardButton("⚡️ ᴀʙᴏᴜᴛ", callback_data = "about"),
-                    InlineKeyboardButton('🍁 ᴅᴏɴᴀᴛᴇ ᴜs', url='https://t.me/THE_VANQUISHERS/28')
+                    InlineKeyboardButton("😊 About Me", callback_data = "about"),
+                    InlineKeyboardButton("🔒 Close", callback_data = "close")
         
     ]
             ]
