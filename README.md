@@ -23,25 +23,25 @@
     ─「 ᴅᴇᴩʟᴏʏ ᴏɴ ʜᴇʀᴏᴋᴜ 」─
 </h3>
 
-<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/YuuichiSama/auto-deleteFileStore/tree/3fsub">
+<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/YuuichiLearner/3-Force-Sub">
   <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy On Heroku">
 </a></p>
 <h3 align="center">
     ─「 ᴅᴇᴩʟᴏʏ ᴏɴ ᴋᴏʏᴇʙ 」─
 </h3>
-<p align="center"><a href="https://app.koyeb.com/deploy?type=git&repository=github.com/Codeflix-Bots/FileStore&branch=3fsub&name=3fsub">
+<p align="center"><a href="https://app.koyeb.com/deploy?type=git&repository=github.com/YuuichiLearner/3-Force-Sub">
   <img src="https://www.koyeb.com/static/images/deploy/button.svg" alt="Deploy On Koyeb">
 </a></p>
 <h3 align="center">
     ─「 ᴅᴇᴩʟᴏʏ ᴏɴ ʀᴀɪʟᴡᴀʏ 」─
 </h3>
-<p align="center"><a href="https://railway.app/deploy?template=https://github.com/Codeflix-Bots/FileStore/tree/3fsub"">
+<p align="center"><a href="https://railway.app/deploy?template=https://github.com/YuuichiLearner/3-Force-Sub"">
      <img height="45px" src="https://railway.app/button.svg">
 </a></p>
 <h3 align="center">
     ─「 ᴅᴇᴩʟᴏʏ ᴏɴ ʀᴇɴᴅᴇʀ 」─
 </h3>
-<p align="center"><a href="https://render.com/deploy?repo=https://github.com/Codeflix-Bots/FileStore/tree/3fsub">
+<p align="center"><a href="https://render.com/deploy?repo=https://github.com/YuuichiLearner/3-Force-Sub">
 <img src="https://render.com/images/deploy-to-render-button.svg" alt="Deploy to Render">
 </a></p>
 <h3 align="center">
