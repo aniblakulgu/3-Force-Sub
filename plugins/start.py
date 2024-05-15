@@ -122,20 +122,20 @@ REPLY_ERROR = "<code>Use this command as a reply to any telegram message without
 async def not_joined(client: Client, message: Message):
     buttons = [
         [
-            InlineKeyboardButton(text="⚡️ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ⚡️", url=client.invitelink2),
+            InlineKeyboardButton(text="Animelar - Uzbek Tilida", url=client.invitelink2),
         ],
         [
-            InlineKeyboardButton(text="⚡️ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ⚡️", url=client.invitelink3),
+            InlineKeyboardButton(text="Otaku | Anime Yangiliklari", url=client.invitelink3),
         ],
         [
-            InlineKeyboardButton(text="⚡️ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ⚡️", url=client.invitelink),
+            InlineKeyboardButton(text="Iblislar qotili | 4-Fasl", url=client.invitelink),
         ]
     ]
     try:
         buttons.append(
             [
                 InlineKeyboardButton(
-                    text = '⚡️ᴛʀʏ ᴀɢᴀɪɴ⚡️',
+                    text = '✅ Tekshirish',
                     url = f"https://t.me/{client.username}?start={message.command[1]}"
                 )
             ]
